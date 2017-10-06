@@ -11,11 +11,10 @@ Folgenden Kofiguration habe ich benutzt :
 Den Touch gibt es mittlerweile auch passend für den Raspberry Pi 3.   
 
 Herzliche Dank an die Autoren der Projekte 
-https://github.com/5Volt-Junkie/RPi-Tron-Radio
+https://github.com/5Volt-Junkie/RPi-Tron-Radio und 
 https://forum-raspberrypi.de/forum/thread/19020-newtron-radio-aufloesungsunabhaengiges-tron-radio/?pageNo=1
  
 Im Projekt sind einige Teile aus 
 https://forum-raspberrypi.de/forum/thread/19020-newtron-radio-aufloesungsunabhaengiges-tron-radio/?pageNo=1
-und den dort beschriebene Projekten enthalten ohne die ich mir schwer getan hätte. An dieser Stelle 
-einen herzlichen Dank an die Autoren. Die Beschreibung der Installation kann auch auf dieses Projekt 
-angewendet werden. Die Icons für die Wetterdaten habe ich aus diesem Projekt übernommen.
+und den dort beschriebene Projekten enthalten ohne die ich mir schwer getan hätte. 
+Die Icons für die Wetterdaten habe ich aus diesem Projekt übernommen.
