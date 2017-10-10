@@ -116,12 +116,13 @@ ButtonText = ["11", "12", "13", "21", "22", "23", "31", "32", "33"]
 
 # OpenWeatherMap city-ID - gibt den Ort für die Wetterdaten an
 # Zu ermitteln über http://openweathermap.org
-OWM_ID = 'abcdefg'                                          
+OWM_ID = '1234567' 
 
 # API-Key für die OpenWeatherMap API
 # Der Key kann einfach über http://openweathermap.org/appid
 # angefordert werden. Der Key ist hier als String anzugeben
-OWM_KEY = '1234567890abcdef1234567890abcdef'                
+OWM_KEY = '1234567890abcdef1234567890abcdef'
+
 
 # -----------------------------------------------------------------------------------------------------
 
@@ -837,9 +838,10 @@ while True:
         OnTouchMenue01((0, 0)) 
         ScreenSaver = False
       break
-    if event.type == pygame.MOUSEBUTTONUP:    # Maus Event ButtonUp
+    elif event.type == pygame.MOUSEBUTTONUP:      # Maus Event ButtonUp
       DrawButtons()
       break
+    
     if event.type == USEREVENT + 1:   			  # Timer Event - update screen
       if (ScreenSaver != True):	
         UpdateInfo()						              # oberer Bildschirmbereich mit Uhr
@@ -850,11 +852,13 @@ while True:
       else:
         ShowScreenSaver()
       break
+    
     if event.type == USEREVENT + 2:
       TimeOutScreenSaver = TimeOutScreenSaver + 1	  	
       if (TimeOutScreenSaver == 60):
         ScreenSaver = True	
       break	    
+    
     if event.type == USEREVENT + 3:
       WetterTimer = WetterTimer + 1
       if WetterTimer == 30:
