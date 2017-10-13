@@ -5,7 +5,7 @@ Das Projekt dient dazu Python zu lernen und gleichzeitig etwas "sinnvolles" zu p
 
 Folgenden Kofiguration habe ich benutzt :
  - Raspberry Pi 3
- - Adafruit PiTFT 2.8" TFT 320x240 + Capacitive Touchscreen
+ - Adafruit PiTFT 2.8" TFT 320x240 + Touch 
  - System : Jessie Lite-based PiTFT 2,8" - Image vom 23.09.2016
 
 Den Touch gibt es mittlerweile auch passend für den Raspberry Pi 3.   
