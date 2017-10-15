@@ -116,13 +116,12 @@ ButtonText = ["11", "12", "13", "21", "22", "23", "31", "32", "33"]
 
 # OpenWeatherMap city-ID - gibt den Ort für die Wetterdaten an
 # Zu ermitteln über http://openweathermap.org
-OWM_ID = '1234567' 
+OWM_ID = '1234567'
 
 # API-Key für die OpenWeatherMap API
 # Der Key kann einfach über http://openweathermap.org/appid
 # angefordert werden. Der Key ist hier als String anzugeben
 OWM_KEY = '1234567890abcdef1234567890abcdef'
-
 
 # -----------------------------------------------------------------------------------------------------
 
@@ -140,7 +139,8 @@ M02ShowStreamUrl = False
 M02ShowWlanInfo  = False
 M02ShowWetter    = False
 
-TimeOutScreenSaver = 0;
+TimeOutScreenSaver  = 0;
+TimeOutButtonAktive = 0;
 ScreenSaver = False
 
 # Wetterdaten
@@ -818,6 +818,7 @@ while True:
   for event in pygame.event.get():
     if event.type == pygame.MOUSEBUTTONDOWN:   # Maus Event ButtonDown
       TimeOutScreenSaver = 0
+      TimeOutButtonAktive = 0;
       if (ScreenSaver != True):	
         if ActiveMenue == 1:
           OnTouchMenue01(pygame.mouse.get_pos())
@@ -838,7 +839,8 @@ while True:
         OnTouchMenue01((0, 0)) 
         ScreenSaver = False
       break
-    elif event.type == pygame.MOUSEBUTTONUP:      # Maus Event ButtonUp
+    
+    if event.type == pygame.MOUSEBUTTONUP:    # Maus Event ButtonUp
       DrawButtons()
       break
     
@@ -849,6 +851,10 @@ while True:
           UpdateScreenMenue01()               # Infobereich 2, Menü 1 
         elif ActiveMenue == 2:
           UpdateScreenMenue02()               # Infobereich 2, Menü 2
+
+        TimeOutButtonAktive = TimeOutButtonAktive + 1;
+        if (TimeOutButtonAktive == 4):
+          DrawButtons()        
       else:
         ShowScreenSaver()
       break
